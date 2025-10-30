@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f0f4f8, #e0eafc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .apply-box {
+        max-width: 700px;
+        background-color: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .apply-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #1e293b;
+    }
+
+    h1 span {
+        color: #2563eb;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    label {
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+        color: #1e293b;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-size: 0.9rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+        outline: none;
+    }
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    button {
+        background: linear-gradient(90deg, #2563eb, #9333ea);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.2s ease, opacity 0.3s ease;
+    }
+
+    button:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            grid-template-columns: 1fr;
+        }
+        button {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="apply-box">
+    <h1>Job Application <span>(Web)</span></h1>
+    <form>
+        <div class="form-container">
+            <div>
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name">
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div>
+                <label>Job role</label>
+                <select>
+                    <option>Select a job role</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Full Stack Developer</option>
+                    <option>Designer</option>
+                </select>
+            </div>
+            <div>
+                <label>Address</label>
+                <textarea rows="3" placeholder="Enter your address"></textarea>
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" placeholder="Enter your city">
+            </div>
+            <div>
+                <label>Pin code</label>
+                <input type="text" placeholder="Enter Pin code">
+            </div>
+            <div>
+                <label>Date</label>
+                <input type="date">
+            </div>
+            <div class="full-width">
+                <label>Upload CV</label>
+                <input type="file">
+            </div>
+            <div class="full-width">
+                <button type="submit">Apply Now</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
